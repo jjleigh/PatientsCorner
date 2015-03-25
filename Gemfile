@@ -32,6 +32,7 @@ gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "haml-rails"
 gem "pry-rails"
 gem "cocoon"
 gem 'simple_form'
