@@ -5,22 +5,22 @@ Rails.application.routes.draw do
 
   resources :categories, :only => [:index, :show]
 
-  resource :clinic_admin do
+  resources :clinic_admin do
     resources :clincs
   end
 
-  resource :patients do
+  resources :patients do
     resources :reviews
     resources :appointments
   end
 
-  resource :doctors do
+  resources :doctors do
     resources :appointments
     resources :reviews, :only => [:index, :show]
     resources :patients, :only => [:index, :show]
   end 
 
-  resource :clinics do
+  resources :clinics do
     resources :reviews, :only => [:index, :show]
     resources :categories
     resources :doctors, :only => [:index, :show]
