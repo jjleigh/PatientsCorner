@@ -1,16 +1,32 @@
 Rails.application.routes.draw do
 
-
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "login" => "sessions#create", :as  => "login"
 
   resources :categories, :only => [:index, :show]
 
-  namespace :doctor do
+  resource :clinic_admin do
+    resources :clincs
+  end
+
+  resource :patients, :controller => "users" do
+    resources :reviews
     resources :appointments
   end
 
+  resource :doctors do
+    resources :appointments
+    resources :reviews, :only => [:index, :show]
+    resources :patients, :only => [:index, :show]
+  end 
 
+  resource :clinics do
+    resources :reviews, :only => [:index, :show]
+    resources :categories
+    resources :doctors, :only => [:index, :show]
+    # want to be able to see the doctors appointments
+  end
+  resources :categories, :only [:index, :show]
   # root 'welcome#index'
 
   # Example of regular route:
