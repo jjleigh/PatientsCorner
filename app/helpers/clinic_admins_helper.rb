@@ -1,0 +1,2 @@
+module ClinicAdminsHelper
+end
