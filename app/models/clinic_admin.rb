@@ -1,3 +1,3 @@
 class ClinicAdmin < User
-	has_many :clinics
+	has_many :clinics, dependent: :destroy
 end
