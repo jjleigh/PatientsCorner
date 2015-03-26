@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   resources :categories, :only => [:index, :show]
 
 
-  # You can have the root of your site routed with "root"
+
   # root 'welcome#index'
 
   # Example of regular route:
