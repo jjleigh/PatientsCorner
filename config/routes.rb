@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :clincs
   end
 
-  resource :patients, :controller => "users" do
+  resource :patients do
     resources :reviews
     resources :appointments
   end
@@ -26,7 +26,6 @@ Rails.application.routes.draw do
     resources :doctors, :only => [:index, :show]
     # want to be able to see the doctors appointments
   end
-  resources :categories, :only [:index, :show]
   # root 'welcome#index'
 
   # Example of regular route:
