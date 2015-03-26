@@ -5,9 +5,6 @@ class ClinicAdminsController < ApplicationController
   def create
   end
 
-  def index
-  end
-
   def edit
   end
 
