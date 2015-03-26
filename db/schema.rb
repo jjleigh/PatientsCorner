@@ -58,6 +58,9 @@ ActiveRecord::Schema.define(version: 20150325195503) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "type"
+    t.integer  "clinic_id"
+    t.integer  "category_id"
+    t.integer  "phone_number"
   end
 
 end

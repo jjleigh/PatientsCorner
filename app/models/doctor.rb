@@ -1,2 +1,2 @@
-class Doctor < User
+class Doctor <  ActiveRecord::Base
 end
