@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'sessions/create'
 
-  get 'sessions/destroy'
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "login" => "sessions#create", :as  => "login"
 
   resources :categories, :only => [:index, :show]
 
+  namespace :doctor do
+    resources :appointments
+  end
 
 
   # root 'welcome#index'
