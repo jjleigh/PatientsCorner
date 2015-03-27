@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: 'welcome#home'
+
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "login" => "sessions#create", :as  => "login"
 
