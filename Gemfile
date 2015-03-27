@@ -32,6 +32,7 @@ gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'modernizr-rails'
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
 gem "haml-rails"
