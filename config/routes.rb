@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :categories, :only => [:index, :show]
 
-  resources :clinic_admin do
+  resources :clinic_admins do
     resources :clincs
   end
 
